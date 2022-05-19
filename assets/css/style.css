@@ -1,0 +1,141 @@
+:root{
+	/* Custom Scrollbar - WebKit */
+	--scrollbarWidthSlim: 6px; 
+	--scrollbarBgColourGradient: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #3b3b3b;
+    color: white;
+}
+a, a:hover, a:active, a:visited {
+    color: #8cd4a8;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px 50px auto 10px;
+    grid-gap: 10px;
+    padding: 10px;
+    width: calc(100vw - 3 * 10px);
+    height: calc(100vh - 2 * 10px);
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 22px;
+}
+.area {
+    resize: none;
+    background-color: #5b5b5b;
+    color: #c8c8c8;
+    border: 1px solid #4e4e4e;
+    padding: 10px;
+    font-size: 10px;
+    font-family: monospace;
+}
+#title {
+    grid-column: 1 / 3;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 32px;
+    text-align: center;
+}
+#input-header {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+.output-box {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    display: flex;
+    flex-direction: column;
+}
+.output-level-bar {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #666;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.output-level-bar > * {
+    margin-right: 4px;
+}
+.form-component {
+    box-shadow: inset 0 1px 3px 0 #91b8b3;
+    border: 1px solid #566963;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 4px 20px;
+}
+#levels-to-show {
+    padding: 0 10px;
+    width: 30px;
+}
+.button {
+    background-color: #768d87;
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 #2b665e;
+}
+.button:hover {
+    background-color: #6c7c7c;
+}
+.button:active {
+    position: relative;
+    top: 1px;
+}
+.label {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+}
+#output-header {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+#input-area {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+#output-area {
+    height: 100%;
+}
+.footer {
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+    /* display: flex;
+    justify-content: flex-end;
+    align-items: center; */
+    font-size: 11px;
+}
+
+.footer #modified
+{
+    float: left; 
+    width: 33%; 
+    text-align: left;
+}
+
+.footer #center
+{ 
+    float: center;
+    width: 34%; 
+    text-align: center;
+}
+
+.footer #original
+{
+    float: right; 
+    width: 33%; 
+    text-align: right;
+}
